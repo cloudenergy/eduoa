@@ -5,7 +5,7 @@ class DATABASE_CONFIG
 								'connect' => 'mysql_connect',
 								'host' => 'localhost',
 								'login' => 'root',
-								'password' => 'root',
+								'password' => '',
 								'database' => 'eduoa',
 								'prefix' => '',
 		                        'encoding' => 'utf8');
@@ -14,7 +14,7 @@ class DATABASE_CONFIG
 							'connect' => 'mysql_connect',
 							'host' => 'localhost',
 							'login' => 'root',
-							'password' => 'root',
+							'password' => '',
 							'database' => 'eduoa',
 							'prefix' => '');
 }

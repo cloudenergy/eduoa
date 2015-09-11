@@ -26,6 +26,7 @@
  * @lastmodified	$Date: 2007-06-20 03:28:35 -0500 (Wed, 20 Jun 2007) $
  * @license			http://www.opensource.org/licenses/mit-license.php The MIT License
  */
+	error_reporting(E_ALL ^ E_STRICT ^ E_DEPRECATED);
 /**
  * Configuration, directory layout and standard libraries
  */
@@ -78,7 +79,7 @@
 		include WWW_ROOT . DS . 'css.php';
 		die();
 	}
-
+	
 	Configure::write('debug', DEBUG);
 
 	require CAKE . 'dispatcher.php';

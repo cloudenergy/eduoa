@@ -1,9 +1,3 @@
-<?php
-	if(!$this->controller->Session->read('User.id')) {
-		echo("<script language='JavaScript'>alert('X 您长时间未操作，信息已过期，请重新登录！');top.location.replace('/eduoa/index.php');</script>");
-		exit();
-	}
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -22,6 +16,11 @@ if(isset($javascript)):
 endif;          
 ?> 
 <?php echo $html->css('bb.generic');?>
+<?php
+	if(!$this->controller->Session->read('User.id')) {
+		echo("<script type='text/javascript'>alert('X 您长时间未操作，信息已过期，请重新登录！');if(top.location.pathname!='/') top.location = '/'</script>");
+	}
+?>
 </head>
 <body>
 <?php
